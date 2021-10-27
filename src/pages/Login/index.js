@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from "react";
 import {Text, View, Image} from 'react-native';
-import { RectButton, TextInput } from 'react-native-gesture-handler';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 
 import styles from './styles';
@@ -11,7 +11,7 @@ function LoginUser(){
     const {navigate} = useNavigation();
 
     function HandleNavigateToHomePage(){
-        navigate('Paths');
+        navigate('Path');
       }
 
 
@@ -41,11 +41,11 @@ function LoginUser(){
                     >
                     </TextInput>
 
-                    <RectButton onPress={HandleNavigateToHomePage}>
+                    <TouchableOpacity onPress={HandleNavigateToHomePage}>
                         <Text style={styles.button}>
                             Entrar!
                         </Text>
-                    </RectButton>
+                    </TouchableOpacity>
                     <Text style={styles.recoverPass}>
                         Esqueceu sua senha?
                     </Text>

@@ -47,14 +47,17 @@ const styles = StyleSheet.create({
     },
 
     button: {
+        alignItems: 'center',
+        textAlign: 'center',
+        justifyContent: 'center',
         color: 'white',
         width: '100%',
         height: 38,
         backgroundColor: 'steelblue',
         marginTop: '15%',
-        borderRadius: 5,
-        textAlign: 'center',
-        padding: 7,
+        borderRadius: 5, 
+        padding: 8,
+        
     },
 
     recoverPass: {

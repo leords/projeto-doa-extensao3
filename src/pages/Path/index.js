@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { View, FlatList, Text } from "react-native";
 
 import styles from './styles';
@@ -16,7 +17,14 @@ const coletas = [       //dados para lista a FlatList;
 ];
 
 
-function Paths() {
+function Path() {
+
+    const {navigate} = useNavigation();
+
+    function HandleNavigateToMapIngoPage (){
+        navigate('Map')
+    }
+
     return(
         <View style={styles.container}>
             <View style={styles.containerCalendar}>
@@ -28,7 +36,7 @@ function Paths() {
                     data={coletas}
                     renderItem={({item}) => 
                         <TouchableOpacity
-                        onPress={() => {alert('Botão ativo!')}}
+                        onPress={HandleNavigateToMapIngoPage}
                         >
                             <CollectionItem product={item.product} local={item.local} donor={item.donor}/>
                         </TouchableOpacity>
@@ -39,4 +47,4 @@ function Paths() {
  
     );
 }
-export default Paths;
+export default Path;

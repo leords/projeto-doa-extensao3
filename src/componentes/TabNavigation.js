@@ -1,9 +1,8 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Paths from "../pages/Paths/paths";
-import Tasks from "../pages/Tasks/tasks";
+import Path from "../pages/Path";
+import Task from "../pages/Task";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,12 +10,12 @@ function TabNavigation() {
     return(
             <Tab.Navigator>
                 <Tab.Screen 
-                name="Paths"
-                component={Paths}
+                name="Path"
+                component={Path}
                 />
                 <Tab.Screen 
-                name="Tasks"
-                component={Tasks}
+                name="Task"
+                component={Task}
                 />
             </Tab.Navigator>
     );
