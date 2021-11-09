@@ -9,8 +9,8 @@ import styles from './styles';
 function Map(){
 
     const [position, setPosition] = useState({
-        latitude: -26.1839027,
-        longitude: -50.3962975,
+        latitude: -26.1964369,
+        longitude: -50.3695686,                
         latitudeDelta: 0.0143,
         longitudeDelta: 0.0134,
       });
@@ -30,21 +30,23 @@ function Map(){
                 region={position}
                 showsUserLocation={true}
                 loadingEnabled={true}
-            >                               
+            >
                 <Marker 
-                coordinate={destination} 
-                title={'Leonardo'}
-                description={'Blusas'}
-                >                
-                </Marker>
+                    coordinate={destination} 
+                    title={'Leonardo'}
+                    description={'Jaquetas'}
+                    >
+                </Marker>                               
+                
 
                 <MapViewDirections
-                        strokeWidth={2}		//tamanho da linha que vai demarcar a rota no mapa
-                        strokeColor="black"	//cor da linha
-                        origin={position}		//a posição do usuário
-                        destination={destination}	//o local final da rota
-                        apikey={"AIzaSyA68Jkduv4wVAMgZSfg4_m6ftJ8p62JFEU"}	//sua api key
-                    />
+                    strokeWidth={3}		//tamanho da linha que vai demarcar a rota no mapa
+                    strokeColor="steelblue"	//cor da linha
+                    origin={position}		//a posição do usuário
+                    destination={destination}	//o local final da rota
+                    apikey={"AIzaSyA68Jkduv4wVAMgZSfg4_m6ftJ8p62JFEU"}	//sua api key
+                    mode="DRIVING"
+                />
 
             </MapView>
         </View>
