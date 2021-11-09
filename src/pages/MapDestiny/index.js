@@ -3,6 +3,7 @@ import { View, Text, ScrollView} from 'react-native';
 import styles from "./styles";
 
 import Map from '../../componentes/Map';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 
 export function ItemInformationMap(props){

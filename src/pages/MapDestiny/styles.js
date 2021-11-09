@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
         height: '45%',
         width: '100%',
         backgroundColor: 'white',
-        borderTopLeftRadius: 40,
-        borderTopRightRadius: 40,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
 
         shadowColor: "#000",
         shadowOffset: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     h1: {
         fontSize: 17,
         margin: '2%',
-        marginLeft: '10%',
+        marginLeft: '-1%',
         color: 'steelblue'
     },
 
